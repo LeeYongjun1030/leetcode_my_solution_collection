@@ -1,0 +1,28 @@
+class Solution:
+    def trap(self, height: List[int]) -> int:
+        left = right = 0
+        
+        left_h = []
+        right_h = []
+        
+        for value in height:
+            left = max(value,left)
+            left_h.append(left)
+            
+        for value in height[::-1]:
+            right = max(value,right)
+            right_h.append(right)
+        
+        right_h = right_h[::-1]
+        
+        output =0
+        
+        for i in range(len(height)):
+            output += min(left_h[i],right_h[i])-height[i]
+            
+        return output
+            
+            
+        
+        
+        

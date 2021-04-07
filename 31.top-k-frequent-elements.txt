@@ -1,0 +1,14 @@
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        dict = collections.Counter(nums)
+          
+        output = []
+        
+        value = dict.most_common(k)
+        
+        for i in range(k):
+            
+            output.append(value[i][0])
+           
+                        
+        return output
