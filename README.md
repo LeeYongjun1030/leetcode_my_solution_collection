@@ -6,7 +6,7 @@ if you want to see the problem, please go to
 https://leetcode.com/problems/[problem_name]   
 
 for example,   
-if file name is '8.trapping-rain-water',   
+if file name is '8.trapping-rain-water.txt',   
 
 https://leetcode.com/problems/trapping-rain-water.   
 
