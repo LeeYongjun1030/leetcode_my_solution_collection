@@ -1,0 +1,23 @@
+class Solution:
+    def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
+        
+        result = -1
+        
+        for start in range(len(gas)):
+            fuel =0
+            
+            for i in range(start, start+len(gas)):  
+                i = i % len(gas)
+                fuel += gas[i]
+               
+                if fuel >= cost[i]:
+                    fuel -=cost[i]  
+                else:
+                    break
+                
+                if ((i+1) % len(gas)) == start:
+                    result = start
+                    
+        return result
+            
+        

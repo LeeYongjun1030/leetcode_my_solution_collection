@@ -1,0 +1,17 @@
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        p1,p2 = 0,0
+        length =0
+        dict=collections.defaultdict(int)
+        
+        while p2 < len(s):
+            if p1==p2 or dict[s[p2]]==0:
+                dict[s[p2]]=1
+                length = max(length, p2-p1+1)
+                p2+=1    
+            else:
+                dict[s[p1]]=0
+                p1+=1   
+                
+        return length
+        
